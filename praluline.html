@@ -36,11 +36,13 @@
         }
 
         img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            margin-bottom: 30px;
-        }
+        width: 100%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+		}
 
         h2 {
             color: #7a3e2f;
@@ -81,7 +83,7 @@
             background-color: #d1738d; /* Teinte plus foncée au survol */
         }
 
-        @media (max-width: 300px) {
+        @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
             }
