@@ -31,13 +31,16 @@
             flex-wrap: wrap;
             gap: 30px;
             padding: 50px 20px;
+            max-width: 820px; /* Limite la largeur à 3 cartes + gaps */
+            margin: 0 auto; /* Centre horizontalement */
         }
 
         .card {
+            flex: 1 1 calc((100% - 60px) / 3); /* 3 cartes par ligne avec gap */
+            max-width: 250px;
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            width: 250px;
             text-align: center;
             text-decoration: none;
             color: #333;
@@ -62,6 +65,24 @@
             margin: 15px 0;
             color: #b5651d;
         }
+
+        /* Responsive : sur petits écrans, 1 ou 2 cartes par ligne */
+        @media (max-width: 800px) {
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+            .card {
+                flex: 1 1 calc((100% - 30px) / 2);
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,19 +106,19 @@
             <img src="https://i0.wp.com/www.lespepitesdecloe.com/wp-content/uploads/2019/03/recette-paris-brest-les-p%C3%A9pites-de-clo%C3%A9-4l.jpg?resize=1140%2C758&ssl=1" alt="Paris-Brest">
             <h2>Paris-Brest</h2>
         </a>
-		
-		<a href="tartecitron.html" class="card">
+        
+        <a href="tartecitron.html" class="card">
             <img src="https://assets.afcdn.com/recipe/20161201/2675_w2048h1536c1cx2808cy1872.jpg" alt="tarte-au-citron">
             <h2>Tarte au citron</h2>
         </a>
-		
-		<a href="fondantchocolat.html" class="card">
+        
+        <a href="fondantchocolat.html" class="card">
             <img src="https://lacuisinedegeraldine.fr/wp-content/uploads/2020/12/DSC00413-scaled.jpg" alt="fondant-au-chocolat">
             <h2>Fondant au chocolat</h2>
         </a>
-		
-		<a href="cheesecake.html" class="card">
-            <img src="https://b769ed60.delivery.rocketcdn.me/wp-content/uploads/2021/01/cheesecake-basque-680x450.jpg" alt="fondant-au-chocolat">
+        
+        <a href="cheesecake.html" class="card">
+            <img src="https://b769ed60.delivery.rocketcdn.me/wp-content/uploads/2021/01/cheesecake-basque-680x450.jpg" alt="cheesecake">
             <h2>Cheesecake</h2>
         </a>
     </div>
