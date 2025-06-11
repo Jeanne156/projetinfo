@@ -18,11 +18,11 @@
         }
 
         header {
-			background-color: #fff3b0;
-			color: #333;
-			text-align: center;
-			padding: 30px 20px;
-		}
+            background-color: #fff3b0;
+            color: #333;
+            text-align: center;
+            padding: 30px 20px;
+        }
 
         header h1 {
             margin: 0;
@@ -66,21 +66,45 @@
             margin-top: 50px;
         }
 
-        .btn-print {
-			background-color: #fff3b0;
-			color: #333;
-			padding: 10px 20px;
-			border: none;
-			font-size: 1em;
-			cursor: pointer;
-			border-radius: 8px;
-			transition: background-color 0.3s ease;
-			margin-bottom: 20px;
-		}
+        .btn-print,
+        .btn-home {
+            background-color: #fff3b0;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            display: inline-block;
+            text-align: center;
+        }
 
-		.btn-print:hover {
-			background-color: #ffe27a;
-		}
+        .btn-print:hover,
+        .btn-home:hover {
+            background-color: #ffe27a;
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .btn-print,
+            .btn-home {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -90,7 +114,10 @@
     </header>
 
     <main>
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        <div class="btn-container">
+            <button class="btn-home" onclick="window.location.href='index.html'" title="Retour à la page d'accueil">⬅️ Retour à l'accueil</button>
+            <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        </div>
 
         <img src="https://assets.afcdn.com/recipe/20161201/2675_w2048h1536c1cx2808cy1872.jpg" 
              alt="Tarte au citron meringuée">
@@ -131,3 +158,4 @@
 
 </body>
 </html>
+
