@@ -1,10 +1,91 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Bienvenue ! </title>
-<meta name="description" content="Bienvenue sur notre site il est trop bien !">
+    <meta charset="UTF-8">
+    <title>Mes Recettes Gourmandes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffdab9;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #8B4513;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            font-size: 1.4em;
+            margin: 15px 0;
+            color: #b5651d;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <h1>🍪 Mes Recettes Gourmandes</h1>
+    </header>
+
+    <div class="container">
+        <a href="praluline.html" class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Praluline_par_Pralus.jpg/640px-Praluline_par_Pralus.jpg" alt="Praluline">
+            <h2>La Praluline</h2>
+        </a>
+
+        <a href="cookies.html" class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Cookies_chocolate_chip.jpg" alt="Cookies">
+            <h2>Cookies Maison</h2>
+        </a>
+
+        <a href="parisbrest.html" class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris-Brest_Patisserie.jpg/640px-Paris-Brest_Patisserie.jpg" alt="Paris-Brest">
+            <h2>Paris-Brest</h2>
+        </a>
+    </div>
+
 </body>
 </html>
