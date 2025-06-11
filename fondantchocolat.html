@@ -79,6 +79,14 @@
 
         .btn-print:hover {
             background-color: #944b2e;
+			color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
         }
 
         @media (max-width: 600px) {
@@ -94,7 +102,10 @@
     </header>
 
     <main>
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        <div class="btn-container">
+            <a href="index.html" class="btn-home" title="Retour à la page d'accueil">⬅️ Retour à l'accueil</a>
+            <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        </div>
 
         
         <img src="https://lacuisinedegeraldine.fr/wp-content/uploads/2020/12/DSC00413-scaled.jpg" alt="Fondant au Chocolat" />
