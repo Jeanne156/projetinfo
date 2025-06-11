@@ -67,7 +67,8 @@
             margin-top: 50px;
         }
 
-        .btn-print {
+        .btn-print,
+        .btn-home {
             background-color: #e04a6c; /* Rose praline */
             color: white;
             padding: 10px 20px;
@@ -77,15 +78,32 @@
             border-radius: 8px;
             transition: background-color 0.3s ease;
             margin-bottom: 20px;
+            margin-right: 10px;
+            display: inline-block;
+            text-align: center;
         }
 
-        .btn-print:hover {
+        .btn-print:hover,
+        .btn-home:hover {
             background-color: #c53f60; /* plus sombre au survol */
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
         }
 
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
+            }
+            .btn-print,
+            .btn-home {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+            .btn-container {
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
@@ -97,7 +115,10 @@
     </header>
 
     <main>
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        <div class="btn-container">
+            <button class="btn-home" onclick="window.location.href='index.html'" title="Retour à la page d'accueil">⬅️ Retour à l'accueil</button>
+            <button class="btn-print" onclick="window.print()">🖨️ Imprimer la recette</button>
+        </div>
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Praluline_et_couteau_%28ao%C3%BBt_2022%29.jpg/960px-Praluline_et_couteau_%28ao%C3%BBt_2022%29.jpg" 
              alt="Praluline maison">
@@ -138,3 +159,4 @@
 
 </body>
 </html>
+
